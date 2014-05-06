@@ -1,0 +1,30 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: tourgames_development
+  pool: 5
+  username: Perry
+  password:
+  host: localhost
+  port: 5432
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: tourgames_test
+  pool: 5
+  username: Perry
+  password:
+  host: localhost
+  port: 5432
+
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: tourgames_production
+  pool: 5
+  username: Perry
+  password:
+  host: localhost
+  port: 5432
