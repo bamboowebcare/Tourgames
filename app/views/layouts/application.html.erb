@@ -1,12 +1,14 @@
 <%= render "layouts/header" %>
-	
+<%= javascript_include_tag "application" %>
+
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>	
 	
    <%= yield %>
     <%= javascript_include_tag "application" %>
-
-<%= render "layouts/footer" %>
+    <script type="text/javascript">$(function(){ $(document).foundation(); });</script>
+    
+    <%= render "layouts/footer" %>
   </body>
 </html>
