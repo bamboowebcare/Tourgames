@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.1.0"
 
 # These gems are in the :default group
 gem 'rails', '4.1.0'
@@ -20,5 +21,6 @@ end
 
 group :production do 
 	gem 'rails_12factor'
+	gem 'rails_on_heroku'
 end
 
