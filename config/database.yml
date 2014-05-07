@@ -1,12 +1,9 @@
 development:
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
-  database: tourgames_development
+  database: db/development.sqlite3
   pool: 5
-  username: Perry
-  password:
-  host: localhost
-  port: 5432
+  timeout: 5000
 
 test:
   adapter: postgresql
