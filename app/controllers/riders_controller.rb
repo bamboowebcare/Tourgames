@@ -1,10 +1,15 @@
 class RidersController < ApplicationController
-  before_action :set_rider, only: [:show, :edit, :update, :destroy]
+  before_action :set_rider, only: [:list, :show, :edit, :update, :destroy]
 
   # GET /riders
   # GET /riders.json
+  def list
+      @riders = Rider.find(:all)
+   end
+  
   def index
     @riders = Rider.all
+
   end
 
   # GET /riders/1

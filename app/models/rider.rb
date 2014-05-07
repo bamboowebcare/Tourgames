@@ -1,3 +1,3 @@
 class Rider < ActiveRecord::Base
-  belongs_to :CyclingTeams
+  belongs_to :cycling_team
 end
