@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  CyclingTeams_id: 
+  name: MyText
+  birthday: 2014-05-07
+  country: MyString
+  tdf: false
+
+two:
+  CyclingTeams_id: 
+  name: MyText
+  birthday: 2014-05-07
+  country: MyString
+  tdf: false

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :riders
+
   get 'sessions/new'
 
   get "log_out" => "sessions#destroy", :as => "log_out"
