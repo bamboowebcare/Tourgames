@@ -1,0 +1,30 @@
+  <div class="row">    
+    
+    <!-- Main Content Section -->
+       
+   <div class="large-3 columns">
+        <%= render "layouts/googlead" %>
+ </div>
+    
+    <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
+    <div class="large-9 columns">
+<h1>Tour de France Ploegen</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cycling_teams.each do |cycling_team| %>
+      <tr>
+        <td><%= cycling_team.name %></td>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cycling team', new_cycling_team_path %>
