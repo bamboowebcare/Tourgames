@@ -1,15 +1,17 @@
 class CyclingTeamsController < ApplicationController
-  before_action :set_cycling_team, only: [:show, :edit, :update, :destroy]
+    before_action :set_cycling_team, only: [:tdf_teams, :show, :edit, :update, :destroy]
 
   # GET /cycling_teams
   # GET /cycling_teams.json
   def index
     @cycling_teams = CyclingTeam.all
   end
-
+  
   # GET /cycling_teams/1
   # GET /cycling_teams/1.json
   def show
+ 	#render(text: "De View voor deze actie bestaat nog niet")
+  	@cycling_team = CyclingTeam.find(params[:id])
   end
 
   # GET /cycling_teams/new
@@ -56,7 +58,7 @@ class CyclingTeamsController < ApplicationController
   def destroy
     @cycling_team.destroy
     respond_to do |format|
-      format.html { redirect_to cycling_teams_url, notice: 'Cycling team was successfully destroyed.' }
+      format.html { redirect_to cycling_teams_url }
       format.json { head :no_content }
     end
   end
@@ -66,9 +68,10 @@ class CyclingTeamsController < ApplicationController
     def set_cycling_team
       @cycling_team = CyclingTeam.find(params[:id])
     end
+    
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cycling_team_params
-      params.require(:cycling_team).permit(:name, :description, :logo, :tdf)
+      params.require(:cycling_team).permit(:id, :name, :description, :logo, :tdf)
     end
 end

@@ -1,15 +1,10 @@
 class RidersController < ApplicationController
-  before_action :set_rider, only: [:list, :show, :edit, :update, :destroy]
+  before_action :set_rider, only: [:show, :edit, :update, :destroy]
 
   # GET /riders
   # GET /riders.json
-  def list
-      @riders = Rider.find(:all)
-   end
-  
   def index
     @riders = Rider.all
-
   end
 
   # GET /riders/1
@@ -61,7 +56,7 @@ class RidersController < ApplicationController
   def destroy
     @rider.destroy
     respond_to do |format|
-      format.html { redirect_to riders_url, notice: 'Rider was successfully destroyed.' }
+      format.html { redirect_to riders_url }
       format.json { head :no_content }
     end
   end
@@ -74,6 +69,6 @@ class RidersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rider_params
-      params.require(:rider).permit(:CyclingTeams_id, :name, :birthday, :country, :tdf)
+      params.require(:rider).permit(:cycling_team_id, :name, :birthday, :country, :tdf)
     end
 end

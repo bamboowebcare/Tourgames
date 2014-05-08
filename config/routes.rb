@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   
-  resources :riders
-
   get 'sessions/new'
 
   get "log_out" => "sessions#destroy", :as => "log_out"
@@ -9,8 +7,11 @@ Rails.application.routes.draw do
   get "sign_up" => "users#new", :as => "sign_up"
   
   resources :sessions
-  resources :cycling_teams
   
+  resources :cycling_teams do 
+ 	resources :riders
+ 	end
+
   get 'welcome/index'
   get 'welcome/yellow'
   get 'welcome/green'

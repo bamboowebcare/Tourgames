@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140507114106) do
+ActiveRecord::Schema.define(version: 20140508074003) do
 
   create_table "cycling_teams", force: true do |t|
     t.string   "name"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140507114106) do
   end
 
   create_table "riders", force: true do |t|
-    t.integer  "CyclingTeams_id"
+    t.integer  "cycling_team_id"
     t.text     "name"
     t.date     "birthday"
     t.string   "country"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20140507114106) do
     t.datetime "updated_at"
   end
 
-  add_index "riders", ["CyclingTeams_id"], name: "index_riders_on_CyclingTeams_id"
+  add_index "riders", ["cycling_team_id"], name: "index_riders_on_cycling_team_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

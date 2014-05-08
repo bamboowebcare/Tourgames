@@ -1,3 +1,3 @@
 class CyclingTeam < ActiveRecord::Base
- has_many :Riders
+ has_many :riders
 end
