@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  dates: 2014-05-08
+  start: MyText
+  finish: MyText
+  distance: 1
+  type: MyText
+
+two:
+  name: MyText
+  dates: 2014-05-08
+  start: MyText
+  finish: MyText
+  distance: 1
+  type: MyText

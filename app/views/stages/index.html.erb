@@ -1,0 +1,36 @@
+<div class="row">    
+    
+    <!-- Main Content Section -->
+       
+   <div class="large-3 columns">
+        <%= render "layouts/googlead" %>
+ </div>
+ 
+ <h1>Etappes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Etappe</th>
+      <th>Datum</th>
+      <th>Start</th>
+      <th>Finish</th>
+      <th>KM</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stages.each do |stage| %>
+      <tr>
+        <td><%= stage.name %></td>
+        <td><%= stage.dates %></td>
+        <td><%= stage.start %></td>
+        <td><%= stage.finish %></td>
+        <td><%= stage.distance %></td>
+        <td><%= stage.type %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
